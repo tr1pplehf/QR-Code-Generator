@@ -15,6 +15,11 @@ body {
     width: 400px;
     border-radius: 20px;
     background-color: #fff;
+
+    @media (max-width: 576px) {
+        width: 300px;
+    }
+     
 }
 
 .app p {
@@ -41,4 +46,74 @@ body {
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     font-weight: 500;
     color: #fff;
+}
+
+#imgBox {
+    width: 200px;
+    max-height: 0;
+
+    border-radius: 5px;
+    overflow: hidden;
+    transition: max-height 1s;
+}
+
+#qrImg {
+    width: 100%;
+    padding: 10px;
+}
+
+#imgBox.show-img {
+    margin: 5px auto 20px;
+    max-height: 300px;
+    border: 1px solid #d1d1d1;
+}
+
+.error {
+    outline: 0;
+    border-color: red !important;
+    animation-name: error;
+    animation-duration: .5s;
+    animation-delay: 0.25s;
+}
+
+@keyframes error{
+    0% {
+        transform: translateX(0px);
+        timing-function: ease-in;
+    }
+
+    37% {
+        transform: translateX(5px);
+        timing-function: ease-out;
+    }
+
+    55% {
+        transform: translateX(-5px);
+        timing-function: ease-in;
+    }
+
+    73% {
+        transform: translateX(4px);
+        timing-function: ease-out;
+    }
+
+    82% {
+        transform: translateX(-4px);
+        timing-function: ease-in;
+    }
+
+    91% {
+        transform: translateX(2px);
+        timing-function: ease-out;
+    }
+
+    96% {
+        transform: translateX(-2px);
+        timing-function: ease-in;
+    }
+
+    100% {
+        transform: translateX(0px);
+        timing-function: ease-in;
+    }
 }
